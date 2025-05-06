@@ -1,0 +1,8 @@
+Monitor:
+0
+bar length:
+0.2
+cast time (seconds):
+1
+recast time (seconds):
+5
