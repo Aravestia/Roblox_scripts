@@ -6,7 +6,7 @@ import os
 import sys
 
 prev = datetime.now()
-wait_time = 60 * 44
+wait_time = 60 * 43
 
 WINDOW_TITLE = r'C:\WINDOWS\system32\cmd.exe'
 
@@ -35,7 +35,7 @@ def notify(now):
             win.restore()
         win.activate()
         print("Open BGSI in Roblox to collect your chests.")
-        sound_dir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "chest_collect_notification_sound.mp3")
+        sound_dir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "chest_collect_notification_sound_2.mp3")
         sound = playsound(sound_dir)
         sound.stop()
     else:
