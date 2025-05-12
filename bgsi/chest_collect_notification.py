@@ -27,18 +27,22 @@ def notify(now):
     global prev
     prev = now
 
-    windows = gw.getWindowsWithTitle(WINDOW_TITLE)
+    try:
+        windows = gw.getWindowsWithTitle(WINDOW_TITLE)
+        
+        if windows:
+            win = windows[0]
+            if win.isMinimized:
+                win.restore()
+            win.activate()
+        else:
+            print("Window does not exist.")
+    except:
+        pass
     
-    if windows:
-        win = windows[0]
-        if win.isMinimized:
-            win.restore()
-        win.activate()
-        print("Open BGSI in Roblox to collect your chests.")
-        sound_dir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "chest_collect_notification_sound_2.mp3")
-        sound = playsound(sound_dir)
-        sound.stop()
-    else:
-        print("Window does not exist.")
+    print("Open BGSI in Roblox to collect your chests.")
+    sound_dir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "chest_collect_notification_sound_2.mp3")
+    sound = playsound(sound_dir)
+    sound.stop()
 
 wait_until_target()
