@@ -6,7 +6,7 @@ import os
 import sys
 
 prev = datetime.now()
-wait_time = 60 * 43
+wait_time = 60 * 10
 
 WINDOW_TITLE = r'C:\WINDOWS\system32\cmd.exe'
 
